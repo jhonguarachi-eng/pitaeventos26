@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PitaEventos | Unidad Educativa Maestro Pitágoras II</title>
+  <meta name="description" content="Todos los eventos de tu unidad educativa en un solo lugar. Plataforma web para organizar, consultar y recordar las actividades de la Unidad Educativa Maestro Pitágoras II.">
+  <meta name="theme-color" content="#1d2b64">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand" aria-label="PitaEventos, ir al inicio">
+        <img class="brand-logo" src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:2000/https://cdn.gamma.app/anrnaaqekzfkbtk/agent-uploads/tV95K2ZPZhFNZwDBxDeWE.png" alt="Logo de PitaEventos" width="44" height="44">
+        <span class="brand-name">PitaEventos</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="menu" class="nav" aria-label="Principal">
+        <ul class="nav-list">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#eventos">Eventos</a></li>
+          <li><a href="#como-funciona">Cómo usar</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#ingresar" class="btn btn-small">Ingresar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- INICIO -->
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Conecta nuestra comunidad educativa</h1>
+          <p class="hero-lead">Todos los eventos de tu unidad educativa en un solo lugar.</p>
+          <p>Una plataforma web para organizar, consultar y recordar las actividades importantes de la Unidad Educativa Maestro Pitágoras II.</p>
+          <a href="#eventos" class="btn">Explorar eventos</a>
+
+          <ul class="chips" aria-label="Quiénes la usan">
+            <li>Estudiantes</li>
+            <li>Docentes</li>
+            <li>Familias</li>
+            <li>Personal administrativo</li>
+          </ul>
+        </div>
+
+        <!-- Tarjeta con el próximo evento (la rellena script.js) -->
+        <aside class="next-card" aria-live="polite">
+          <p class="next-label">Próximo evento</p>
+          <h2 class="next-title" id="next-title">Cargando…</h2>
+          <p class="next-meta" id="next-meta"></p>
+          <div class="countdown" id="next-countdown" role="timer" aria-label="Cuenta regresiva">
+            <div><strong data-unit="d">0</strong><span>días</span></div>
+            <div><strong data-unit="h">0</strong><span>horas</span></div>
+            <div><strong data-unit="m">0</strong><span>min</span></div>
+            <div><strong data-unit="s">0</strong><span>seg</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- EL PROBLEMA -->
+    <section class="section section-alt" id="problema">
+      <div class="container split">
+        <div>
+          <p class="kicker">El problema</p>
+          <h2>La información escolar no debería perderse</h2>
+        </div>
+        <div class="prose">
+          <p>Entre avisos, mensajes y reuniones, las fechas pueden quedar dispersas.</p>
+          <p>PitaEventos centraliza la información para que estudiantes, docentes y familias sepan qué viene y cuándo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFORMACIÓN CLARA + AGENDA -->
+    <section class="section" id="eventos">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker">Información clara</p>
+          <h2>Todo lo importante, visible</h2>
+          <p>Una consulta rápida reúne los datos que la comunidad necesita para organizarse.</p>
+        </header>
+
+        <div class="grid grid-4">
+          <article class="card">
+            <h3>Evento</h3>
+            <p>Nombre y descripción del evento.</p>
+          </article>
+          <article class="card">
+            <h3>Cuándo y dónde</h3>
+            <p>Fecha, hora y lugar.</p>
+          </article>
+          <article class="card">
+            <h3>Próximas actividades</h3>
+            <p>Calendario de próximas actividades.</p>
+          </article>
+          <article class="card">
+            <h3>Cuenta regresiva</h3>
+            <p>Cuenta regresiva para cada acontecimiento.</p>
+          </article>
+        </div>
+
+        <h3 class="agenda-title">Próximas actividades</h3>
+        <ol class="agenda" id="agenda"></ol>
+        <p class="agenda-empty" id="agenda-empty" hidden>No hay actividades próximas registradas.</p>
+      </div>
+    </section>
+
+    <!-- PLATAFORMA COMPARTIDA -->
+    <section class="section section-alt" id="comunidad">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker">Una plataforma compartida</p>
+          <h2>Una herramienta para toda la comunidad</h2>
+        </header>
+
+        <div class="grid grid-4">
+          <article class="card">
+            <h3>Estudiantes</h3>
+            <p>Consultan fechas y se preparan con anticipación.</p>
+          </article>
+          <article class="card">
+            <h3>Docentes</h3>
+            <p>Organizan y comunican sus actividades.</p>
+          </article>
+          <article class="card">
+            <h3>Familias</h3>
+            <p>Conocen los acontecimientos de la unidad educativa.</p>
+          </article>
+          <article class="card">
+            <h3>Personal administrativo</h3>
+            <p>Mantiene la información actualizada.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section class="section" id="como-funciona">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker">El recorrido</p>
+          <h2>¿Cómo funciona?</h2>
+          <p>De registrar una actividad a consultarla desde un dispositivo compatible.</p>
+        </header>
+
+        <ol class="steps">
+          <li>
+            <h3>Registrar</h3>
+            <p>Se registra el evento con sus datos principales.</p>
+          </li>
+          <li>
+            <h3>Organizar</h3>
+            <p>La actividad aparece organizada en el calendario.</p>
+          </li>
+          <li>
+            <h3>Anticipar</h3>
+            <p>La cuenta regresiva muestra cuánto falta.</p>
+          </li>
+          <li>
+            <h3>Consultar</h3>
+            <p>La comunidad consulta la información desde un dispositivo compatible.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- TIPOS DE ACTIVIDAD -->
+    <section class="section section-alt" id="agenda-anual">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker">Agenda del año escolar</p>
+          <h2>Organiza cada tipo de actividad</h2>
+          <p>Una agenda digital para acompañar todo el año escolar.</p>
+        </header>
+
+        <ul class="tags">
+          <li>Actos cívicos</li>
+          <li>Aniversarios</li>
+          <li>Ferias científicas</li>
+          <li>Campeonatos deportivos</li>
+          <li>Reuniones</li>
+          <li>Celebraciones escolares</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="section" id="beneficios">
+      <div class="container split">
+        <div>
+          <h2>Simple para usar. Útil para planificar.</h2>
+          <p>Interfaz ordenada y fácil de comprender.</p>
+        </div>
+        <ul class="checklist">
+          <li>Eventos organizados cronológicamente.</li>
+          <li>Información disponible desde computadoras y celulares.</li>
+          <li>Actualización de datos cuando sea necesario.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROYECCIÓN -->
+    <section class="section section-alt" id="proyeccion">
+      <div class="container">
+        <header class="section-head">
+          <p class="kicker">Proyección</p>
+          <h2>Una innovación que puede crecer</h2>
+          <p>La propuesta puede incorporar notificaciones, comunicados y registro de actividades realizadas según las necesidades de la institución.</p>
+        </header>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>Notificaciones</h3>
+            <p>Incorporar alertas para acompañar la consulta de actividades.</p>
+          </article>
+          <article class="card">
+            <h3>Comunicados</h3>
+            <p>Sumar comunicados a la información escolar.</p>
+          </article>
+          <article class="card">
+            <h3>Registro de actividades</h3>
+            <p>Registrar las actividades realizadas.</p>
+          </article>
+        </div>
+
+        <p class="note">El siguiente paso es mantener la información actualizada y evaluar mejoras con la comunidad educativa.</p>
+      </div>
+    </section>
+
+    <!-- LLAMADA A LA ACCIÓN -->
+    <section class="cta" id="ingresar">
+      <div class="container cta-inner">
+        <p class="kicker kicker-light">Una fecha clara cambia la organización</p>
+        <h2>Más organización empieza con una fecha clara</h2>
+        <p>Con PitaEventos, la comunidad educativa puede consultar, planificar y participar mejor en cada actividad.</p>
+        <a href="#eventos" class="btn btn-light">Ingresar ahora</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img class="brand-logo" src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:2000/https://cdn.gamma.app/anrnaaqekzfkbtk/agent-uploads/tV95K2ZPZhFNZwDBxDeWE.png" alt="" width="36" height="36">
+      <p>Unidad Educativa Técnica Humanística Maestro Pitágoras II · Sistemas Informáticos</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
