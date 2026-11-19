@@ -13,29 +13,65 @@
    ---------------------------------------------------------- */
 const EVENTOS = [
   {
-    nombre: "Feria científica",
-    descripcion: "Exposición de proyectos de todos los cursos.",
-    fecha: "2026-12-04T08:00:00",
-    lugar: "Patio principal"
-  },
-  {
-    nombre: "Campeonato deportivo interno",
-    descripcion: "Finales de fútbol y básquet.",
-    fecha: "2026-12-11T09:00:00",
-    lugar: "Cancha polifuncional"
-  },
-  {
-    nombre: "Reunión con padres de familia",
-    descripcion: "Entrega de informes del trimestre.",
-    fecha: "2026-12-18T18:30:00",
-    lugar: "Salón de actos"
-  },
-  {
-    nombre: "Celebración de fin de año",
-    descripcion: "Acto de cierre y celebración escolar.",
-    fecha: "2027-01-15T10:00:00",
+    nombre: "Marcha por el Dia del Mar",
+    descripcion: "Acto civico y desfile.",
+    fecha: "2027-03-23T14:30:00",
     lugar: "Unidad Educativa"
-  }
+  },
+  {
+    nombre: "Acto por el Dia del trabajador",
+    descripcion: "Acto civico y palabras de la directiva.",
+    fecha: "2027-05-01T15:00:00",
+    lugar: "Unidad Educativa"
+  },
+  {
+    nombre: "Acto por el Dia del Maestro",
+    descripcion: "Acto civico y reconocimiento a los profesores.",
+    fecha: "2027-06-06T15:00:00",
+    lugar: "Unidad Educativa"
+  },
+  {
+    nombre: "Desfile por la Idependencia de Bolivia",
+    descripcion: "Acto civico y marcha de toda la Unidad Educativa.",
+    fecha: "2027-08-06T14:30:00",
+    lugar: "Unidad Educativa"
+  },
+  {
+    nombre: "Velada",
+    descripcion: "Coronacion de la Miss de Deporte.",
+    fecha: "2027-08-13T20:00:00",
+    lugar: "Unidad Educativa"
+  },
+  {
+    nombre: "Farandula",
+    descripcion: "Asistencia de todos los estudiantes con sus disfraces.",
+    fecha: "2027-08-19T15:30:00",
+    lugar: "Plaza principal"
+  }, 
+  {
+    nombre: "Maraton y Relampago",
+    descripcion: "Competencia deportiva entre estudiantes.",
+    fecha: "2027-08-20T16:00:00",
+    lugar: "Unidad Educativa"
+  }, 
+  {
+    nombre: "Aniversario de la Unidad Educativa",
+    descripcion: "Acto civico, desfile y celebracion.",
+    fecha: "2027-08-21T14:30:00",
+    lugar: "Unidad Educativa"
+  },
+  {
+    nombre: "Acto por el Dia del Estudiante",
+    descripcion: "Se realizara juegos, deportes y concursos.",
+    fecha: "2027-09-21T15:00:00",
+    lugar: "Unidad Educativa"
+  },
+  {
+    nombre: "Marcha por el Aniversario de Santa Cruz",
+    descripcion: "Acto civico, desfile, danzas y presentaciones culturales.",
+    fecha: "2027-09-24T15:00:00",
+    lugar: "Unidad Educativa"
+  },
 ];
 
 /* ---------- Utilidades ---------- */
