@@ -72,6 +72,12 @@ const EVENTOS = [
     fecha: "2027-09-24T15:00:00",
     lugar: "Unidad Educativa"
   },
+  {
+    nombre: "Feria Pedagógica",
+    descripcion: "Ven y disfruta de los Trabajos, Proyectos y expocisiones.",
+    fecha: "2026-11-19T15:00:00",
+    lugar: "Unidad Educativa"
+  },
 ];
 
 /* ---------- Utilidades ---------- */
